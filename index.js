@@ -28,6 +28,9 @@ mongoose.connect('mongodb+srv://kapil123:kapil123@cluster0.wjkqg.mongodb.net/sec
   .then(() => console.log('Connected to MongoDB successfully....'))
   .catch(err => console.error('Could not connect to MongoDB....'));
 
+  app.get('/', (req, res) => {
+    res.send("Hello");
+  })
 app.use(express.json());
 app.use('/api/genres', genres);
 app.use('/api/customers', customers);
